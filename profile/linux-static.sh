@@ -10,15 +10,15 @@ function main {
 
     cmake -B"${build_path}" "${src_path}" \
         -DCMAKE_INSTALL_PREFIX="${prefix_path}" \
-        -DENABLE_WEBRTC:BOOL="0" \
+        -DENABLE_WEBRTC:BOOL="1" \
         -DENABLE_SRT:BOOL="1" \
         -DCMAKE_EXE_LINKER_FLAGS:STRING="-static" \
         -DENABLE_API_STATIC_LIB:BOOL="1" \
         -DENABLE_JEMALLOC_STATIC:BOOL="1" \
-        -DENABLE_X264:BOOL="0" \
+        -DENABLE_X264:BOOL="1" \
         -DENABLE_FFMPEG:BOOL="1" \
         -DENABLE_PLAYER:BOOL="1" \
-        -DENABLE_RTPPROXY:BOOL="0" \
+        -DENABLE_RTPPROXY:BOOL="1" \
         -DCMAKE_BUILD_TYPE:STRING="Release" 
 
     cd "${build_path}" || exit
